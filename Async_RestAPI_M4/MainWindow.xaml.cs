@@ -42,16 +42,35 @@ namespace Async_RestAPI_M4
 
         private void ButtonAsync_Click(object sender, RoutedEventArgs e)
         {
+            Stopwatch stopwatch = Stopwatch.StartNew();
 
+            LoadDataAsync();
+
+            stopwatch.Stop();
+
+            var time = stopwatch.ElapsedMilliseconds;
+
+            textBlockInfo.Text += $"\n\nTotal time: {time}";
         }
 
-        private void LoadDataSync()
+        private void LoadDataAsync()
         {
             List<string> sites = PrepareLoadSites();
 
             foreach (var item in sites)
             {
                 DataModel dataModel = LoadSite(item);
+                PrintInfo(dataModel);
+            }
+        }
+
+        private async Task LoadDataSync()
+        {
+            List<string> sites = PrepareLoadSites();
+
+            foreach (var item in sites)
+            {
+                DataModel dataModel = await Task.Run(() => LoadSite(item));  // lock
                 PrintInfo(dataModel);
             }
         }
