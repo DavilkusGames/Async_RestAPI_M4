@@ -6,7 +6,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows;
 
-namespace Async_RestAPI_M4
+namespace Async_RestAPI
 {
     /// <summary>
     /// Логика взаимодействия для App.xaml

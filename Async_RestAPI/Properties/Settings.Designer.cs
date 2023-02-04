@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Async_RestAPI_M4.Properties
+namespace Async_RestAPI.Properties
 {
 
 
