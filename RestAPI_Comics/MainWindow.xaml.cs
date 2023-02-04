@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
+using RestAPI_Library;
+
 namespace RestAPI_Comics
 {
     /// <summary>
@@ -23,6 +25,18 @@ namespace RestAPI_Comics
         public MainWindow()
         {
             InitializeComponent();
+
+            APIHelper.Init();
+        }
+
+        private void btnPrev_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnNext_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

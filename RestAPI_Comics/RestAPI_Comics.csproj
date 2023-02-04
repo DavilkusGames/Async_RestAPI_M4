@@ -94,5 +94,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\RestAPI_Library\RestAPI_Library.csproj">
+      <Project>{baca85f5-d5ae-4933-ada8-c283b06900f9}</Project>
+      <Name>RestAPI_Library</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
