@@ -13,8 +13,10 @@
         </Grid.RowDefinitions>
 
         <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Width="150" Height="50" Content="Previous" Margin="10"/>
-            <Button Width="150" Height="50" Content="Next" Margin="10"/>
+            <Button Name="btnPrev" Width="150" Height="50" Content="Previous" 
+                    Click="btnPrev_Click" Margin="10"/>
+            <Button Name="btnNext" Width="150" Height="50" Content="Next" 
+                    Click="btnNext_Click" Margin="10"/>
         </StackPanel>
 
         <Image Name="imageComic" Grid.Row="1" Margin="10"/>
