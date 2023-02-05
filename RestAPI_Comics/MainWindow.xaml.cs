@@ -29,14 +29,25 @@ namespace RestAPI_Comics
             APIHelper.Init();
         }
 
+        private async Task LoadImage(int num = 0)
+        {
+            // API
+            var comic = await WorkProcess.Load(num);
+
+            // comic.Img
+
+            imageComic.Source = new BitmapImage(new Uri(comic.Image));
+
+        }
+
         private void btnPrev_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        private void btnNext_Click(object sender, RoutedEventArgs e)
+        private async void btnNext_Click(object sender, RoutedEventArgs e)
         {
-
+            await LoadImage();
         }
     }
 }
